@@ -21,32 +21,77 @@ function App() {
     setResult(eval(expression));
   };
 
+  const removeLast = () => {
+    const newNumber = expression.slice(0, -1);
+    setExpression(newNumber);
+  };
+
   return (
     <>
       <Global />
       <Main>
         <Display>{result || expression}</Display>
         <Wrapper>
-          <button onClick={clear}>AC</button>
-          <button>X</button>
-          <button>%</button>
-          <button onClick={() => addValue("/")}>/</button>
-          <button onClick={() => addValue(7)}>7</button>
-          <button onClick={() => addValue(8)}>8</button>
-          <button onClick={() => addValue(9)}>9</button>
-          <button onClick={() => addValue("*")}>*</button>
-          <button onClick={() => addValue(4)}>4</button>
-          <button onClick={() => addValue(5)}>5</button>
-          <button onClick={() => addValue(6)}>6</button>
-          <button onClick={() => addValue("-")}>-</button>
-          <button onClick={() => addValue(1)}>1</button>
-          <button onClick={() => addValue(2)}>2</button>
-          <button onClick={() => addValue(3)}>3</button>
-          <button onClick={() => addValue("+")}>+</button>
-          <button>#</button>
-          <button onClick={() => addValue(0)}>0</button>
-          <button>,</button>
-          <button onClick={getResult}>=</button>
+          <button className="darkgrey" onClick={clear}>
+            AC
+          </button>
+          <button
+            style={{ fontSize: 36 }}
+            className="darkgrey"
+            onClick={removeLast}
+          >
+            ⌫
+          </button>
+          <button className="darkgrey">%</button>
+          <button className="colored" onClick={() => addValue("/")}>
+            ÷
+          </button>
+          <button className="lightgrey" onClick={() => addValue(7)}>
+            7
+          </button>
+          <button className="lightgrey" onClick={() => addValue(8)}>
+            8
+          </button>
+          <button className="lightgrey" onClick={() => addValue(9)}>
+            9
+          </button>
+          <button className="colored" onClick={() => addValue("*")}>
+            ×
+          </button>
+          <button className="lightgrey" onClick={() => addValue(4)}>
+            4
+          </button>
+          <button className="lightgrey" onClick={() => addValue(5)}>
+            5
+          </button>
+          <button className="lightgrey" onClick={() => addValue(6)}>
+            6
+          </button>
+          <button className="colored" onClick={() => addValue("-")}>
+            -
+          </button>
+          <button className="lightgrey" onClick={() => addValue(1)}>
+            1
+          </button>
+          <button className="lightgrey" onClick={() => addValue(2)}>
+            2
+          </button>
+          <button className="lightgrey" onClick={() => addValue(3)}>
+            3
+          </button>
+          <button className="colored" onClick={() => addValue("+")}>
+            +
+          </button>
+          <button className="lightgrey">#</button>
+          <button className="lightgrey" onClick={() => addValue(0)}>
+            0
+          </button>
+          <button className="lightgrey" onClick={() => addValue(".")}>
+            .
+          </button>
+          <button className="colored" onClick={getResult}>
+            =
+          </button>
         </Wrapper>
       </Main>
     </>

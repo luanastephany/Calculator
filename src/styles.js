@@ -17,12 +17,12 @@ export const Display = styled.div`
   width: 400px;
   font-size: 24px;
   font-family: monospace;
-  background-color: black;
+  background-color: #242b33;
   color: #fff;
 `;
 
 export const Wrapper = styled.div`
-  background-color: gray;
+  background-color: #242b34;
   display: inline-grid;
   grid-template-columns: repeat(4, 100px);
   width: auto;
@@ -30,6 +30,22 @@ export const Wrapper = styled.div`
   button {
     height: 100px;
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
+    border: 1px solid #242b34;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .colored {
+    background-color: #fd9e2b;
+    font-size: 30px;
+  }
+
+  .darkgrey {
+    background-color: #393d43;
+  }
+
+  .lightgrey {
+    background-color: #5a5f67;
   }
 `;
