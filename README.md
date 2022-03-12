@@ -1,5 +1,5 @@
 # Calculator
-
+<img width="532" alt="Screen Shot 2022-03-12 at 1 09 08 PM" src="https://user-images.githubusercontent.com/70078964/158035085-ef430565-4859-4191-9805-4e4a8e2074f5.png">
 
 ## About
 
